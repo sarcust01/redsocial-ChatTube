@@ -3,66 +3,179 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatTube - Feed</title>
+    <title>InstaTube - Feed</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <header class="navbar">
-        <h1><a href="index.html">ChatTube</a></h1>
-        <div>David Lopez</div>
+    <header class="banner">
+        <h1><a href="index.html">InstaTube</a></h1>
+        <div class="auth-nav">
+            <a href="editar.html">Tu Perfil (Editar)</a>
+        </div>
     </header>
 
     <div class="container">
-        
         <main class="main-area">
+            <!-- Publicación de David (Principal) -->
             <div class="post-container">
-                <div class="post-image">
-                    <svg width="100" height="150" viewBox="0 0 100 150">
-                        <circle cx="50" cy="30" r="15" stroke="black" stroke-width="2" fill="none"/>
-                        <line x1="50" y1="45" x2="50" y2="100" stroke="black" stroke-width="2"/>
-                        <line x1="20" y1="60" x2="80" y2="60" stroke="black" stroke-width="2"/>
-                        <line x1="50" y1="100" x2="25" y2="140" stroke="black" stroke-width="2"/>
-                        <line x1="50" y1="100" x2="75" y2="140" stroke="black" stroke-width="2"/>
-                    </svg>
+                <div class="post-header" style="display: flex; align-items: center; padding: 10px 20px; gap: 10px;">
+                    <div class="avatar" style="width: 30px; height: 30px;">
+                        <img src="img/Foto de perfil/Foto de david.jpg" alt="David" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <strong>David Lopez</strong>
                 </div>
-                
-                <p class="post-text">Texto de publicación<br>Lorem ipsum dolor sit amet</p>
+                <div class="post-image img-container">
+                    <img src="img/Foto de perfil/Foto de david.jpg" alt="Última actualización de David">
+                </div>
+                <h3>¡Nueva actualización!</h3>
+                <p>Aquí vamos con todo en este nuevo proyecto. ¡Saludos desde Campeche!</p>
+            </div>
 
-                <div class="comment">
-                    <div class="comment-icon">
-                        <svg width="20" height="20" viewBox="0 0 100 150"><circle cx="50" cy="30" r="15" stroke="black" stroke-width="4" fill="none"/><line x1="50" y1="45" x2="50" y2="100" stroke="black" stroke-width="4"/><line x1="20" y1="60" x2="80" y2="60" stroke="black" stroke-width="4"/><line x1="50" y1="100" x2="25" y2="140" stroke="black" stroke-width="4"/><line x1="50" y1="100" x2="75" y2="140" stroke="black" stroke-width="4"/></svg>
+            <!-- Publicación de Ana -->
+            <div class="post-container">
+                <div class="post-header" style="display: flex; align-items: center; padding: 10px 20px; gap: 10px;">
+                    <div class="avatar" style="width: 30px; height: 30px;">
+                        <img src="img/Foto de perfil/foto de ana.jpg" alt="Ana" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <span class="comment-text">Comentario</span>
+                    <strong>Ana Gómez</strong>
                 </div>
-                
-                <div class="comment">
-                    <div class="comment-icon">
-                        <svg width="20" height="20" viewBox="0 0 100 150"><circle cx="50" cy="30" r="15" stroke="black" stroke-width="4" fill="none"/><line x1="50" y1="45" x2="50" y2="100" stroke="black" stroke-width="4"/><line x1="20" y1="60" x2="80" y2="60" stroke="black" stroke-width="4"/><line x1="50" y1="100" x2="25" y2="140" stroke="black" stroke-width="4"/><line x1="50" y1="100" x2="75" y2="140" stroke="black" stroke-width="4"/></svg>
+                <div class="post-image img-container">
+                    <img src="img/Foto de publicacion/Publicacion de Ana.jpg" alt="Publicación de Ana">
+                </div>
+                <h3>Día productivo</h3>
+                <p>Programando con un buen café al lado. #CodingLife</p>
+            </div>
+
+            <!-- Publicación de Carlos -->
+            <div class="post-container">
+                <div class="post-header" style="display: flex; align-items: center; padding: 10px 20px; gap: 10px;">
+                    <div class="avatar" style="width: 30px; height: 30px;">
+                        <img src="img/Foto de perfil/Foto de Carlos.jpg" alt="Carlos" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                     </div>
-                    <span class="comment-text">Comentario</span>
+                    <strong>Carlos Ruiz</strong>
                 </div>
+                <div class="post-image img-container">
+                    <img src="img/Foto de publicacion/publicacion de carlos.jpg" alt="Publicación de Carlos">
+                </div>
+                <h3>Diseñando el futuro</h3>
+                <p>Nuevos bocetos para la próxima interfaz. ¿Qué les parece?</p>
+            </div>
+
+            <!-- Publicación de Maria -->
+            <div class="post-container">
+                <div class="post-header" style="display: flex; align-items: center; padding: 10px 20px; gap: 10px;">
+                    <div class="avatar" style="width: 30px; height: 30px;">
+                        <img src="img/Foto de perfil/Foto de maria.jpg" alt="Maria" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <strong>María Silva</strong>
+                </div>
+                <div class="post-image img-container">
+                    <img src="img/Foto de publicacion/publicacion de maria.jpg" alt="Publicación de Maria">
+                </div>
+                <h3>Análisis de datos</h3>
+                <p>Hoy toca organizar grandes volúmenes de información. #BigData</p>
+            </div>
+
+            <!-- Publicación de Pedro -->
+            <div class="post-container">
+                <div class="post-header" style="display: flex; align-items: center; padding: 10px 20px; gap: 10px;">
+                    <div class="avatar" style="width: 30px; height: 30px;">
+                        <img src="img/Foto de perfil/Foto de Pedro.jpg" alt="Pedro" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <strong>Pedro León</strong>
+                </div>
+                <div class="post-image img-container">
+                    <img src="img/Foto de publicacion/publicacion de pedro.jpg" alt="Publicación de Pedro">
+                </div>
+                <h3>Grabando contenido</h3>
+                <p>Nuevo video en camino. ¡No se lo pierdan!</p>
+            </div>
+
+            <!-- Publicación de Laura -->
+            <div class="post-container">
+                <div class="post-header" style="display: flex; align-items: center; padding: 10px 20px; gap: 10px;">
+                    <div class="avatar" style="width: 30px; height: 30px;">
+                        <img src="img/Foto de perfil/Foto de Laura.jpg" alt="Laura" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <strong>Laura Paz</strong>
+                </div>
+                <div class="post-image img-container">
+                    <img src="img/Foto de publicacion/publicacion de laura.jpg" alt="Publicación de Laura">
+                </div>
+                <h3>Capturando momentos</h3>
+                <p>La luz de hoy está increíble para unas fotos. #Photography</p>
+            </div>
+
+            <!-- Publicación de Juan -->
+            <div class="post-container">
+                <div class="post-header" style="display: flex; align-items: center; padding: 10px 20px; gap: 10px;">
+                    <div class="avatar" style="width: 30px; height: 30px;">
+                        <img src="img/Foto de perfil/Foto de Juan.jpg" alt="Juan" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
+                    </div>
+                    <strong>Juan Torres</strong>
+                </div>
+                <div class="post-image img-container">
+                    <img src="img/Foto de publicacion/publicacion de juan.jpg" alt="Publicación de Juan">
+                </div>
+                <h3>Explorando nuevos sabores</h3>
+                <p>Probando la comida típica de este lugar. ¡Delicioso!</p>
             </div>
         </main>
 
         <aside class="chat-sidebar">
-            <a href="perfil1.html" class="chat-user"><div class="avatar"></div> Integrante 1</a>
-            <a href="perfil2.html" class="chat-user"><div class="avatar"></div> Integrante 2</a>
-            <a href="perfil3.html" class="chat-user"><div class="avatar"></div> Integrante 3</a>
-            <a href="perfil4.html" class="chat-user"><div class="avatar"></div> Integrante 4</a>
-            <div class="chat-user"><div class="avatar"></div> Persona random 5</div>
-            <div class="chat-user"><div class="avatar"></div> Persona random 6</div>
+            <h3>Contactos</h3>
+            <ul id="chat-list" class="chat-list">
+                <li>
+                    <a href="perfil_ana.html" class="chat-user">
+                        <div class="avatar img-container">
+                            <img src="img/Foto de perfil/foto de ana.jpg" alt="Foto de Ana">
+                        </div>
+                        <span>Ana Gómez</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil_carlos.html" class="chat-user">
+                        <div class="avatar img-container">
+                            <img src="img/Foto de perfil/Foto de Carlos.jpg" alt="Foto de Carlos">
+                        </div>
+                        <span>Carlos Ruiz</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil_maria.html" class="chat-user">
+                        <div class="avatar img-container">
+                            <img src="img/Foto de perfil/Foto de maria.jpg" alt="Foto de María">
+                        </div>
+                        <span>María Silva</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil_pedro.html" class="chat-user">
+                        <div class="avatar img-container">
+                            <img src="img/Foto de perfil/Foto de Pedro.jpg" alt="Foto de Pedro">
+                        </div>
+                        <span>Pedro León</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil_laura.html" class="chat-user">
+                        <div class="avatar img-container">
+                            <img src="img/Foto de perfil/Foto de Laura.jpg" alt="Foto de Laura">
+                        </div>
+                        <span>Laura Paz</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="perfil_juan.html" class="chat-user">
+                        <div class="avatar img-container">
+                            <img src="img/Foto de perfil/Foto de Juan.jpg" alt="Foto de Juan">
+                        </div>
+                        <span>Juan Torres</span>
+                    </a>
+                </li>
+            </ul>
         </aside>
-
     </div>
-
-    <footer class="footer">
-        <p>(C) Rickie Lukens, 2023</p>
-    </footer>
-
-    <div class="floating-btn">
-        <svg width="30" height="40" viewBox="0 0 100 150"><circle cx="50" cy="30" r="15" stroke="black" stroke-width="4" fill="none"/><line x1="50" y1="45" x2="50" y2="100" stroke="black" stroke-width="4"/><line x1="20" y1="60" x2="80" y2="60" stroke="black" stroke-width="4"/><line x1="50" y1="100" x2="25" y2="140" stroke="black" stroke-width="4"/><line x1="50" y1="100" x2="75" y2="140" stroke="black" stroke-width="4"/></svg>
-    </div>
-
 </body>
 </html>

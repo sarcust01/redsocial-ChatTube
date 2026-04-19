@@ -1,4 +1,15 @@
-/* Reset básico */
+/* --- VARIABLES Y RESET --- */
+:root {
+    --color-principal: #4CAF50; /* Verde vibrante para InstaTube */
+    --color-secundario: #45a049;
+    --color-acento: #2e7d32;
+    --color-fondo: #f4f7f6;
+    --color-texto: #333;
+    --color-blanco: #ffffff;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -6,199 +17,292 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #000;
-    padding: 10px;
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.6;
 }
 
-/* Barra de navegación Sticky */
-.navbar {
-    position: sticky;
-    top: 0;
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- BANNER / HEADER --- */
+.banner {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    padding: 15px 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
-    border: 1px solid #000;
-    background-color: #fff;
+    position: sticky;
+    top: 0;
     z-index: 1000;
-    margin-bottom: 10px;
 }
 
-.navbar h1 a {
-    text-decoration: none;
-    color: #000;
+.banner h1 a {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
-/* Contenedor principal a dos columnas */
+.auth-nav a {
+    padding: 5px 10px;
+    font-size: 0.9rem;
+}
+
+.auth-nav a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
 .container {
-    display: flex;
-    gap: 10px;
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 1100px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    padding: 0 20px;
 }
 
-/* Área principal (Feed o Perfil) */
-.main-area {
-    flex: 1;
-    border: 1px solid #000;
-    padding: 20px;
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }
 
-/* Estilos de Publicación (Feed) */
-.post-container {
-    border: 1px solid #000;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 600px;
-}
-
-.post-image {
-    border: 1px solid #000;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.post-text {
-    color: #1a1ab4; /* Azul como en el mockup */
+/* --- ÁREA DE POSTS --- */
+.main-area h2 {
     margin-bottom: 20px;
-    line-height: 1.4;
+    color: var(--color-principal);
 }
 
-.comment {
-    border: 1px solid #000;
-    border-radius: 8px;
-    padding: 10px;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 10px;
-}
-
-.comment-icon {
-    width: 30px;
-    height: 30px;
-    border: 1px solid #000;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.comment-text {
-    color: #1a1ab4;
-}
-
-/* Estilos de Perfil */
-.profile-box {
-    display: flex;
-    gap: 20px;
-}
-
-.profile-pic {
-    border: 1px solid #000;
-    width: 200px;
-    height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-}
-
-.profile-info {
-    flex: 1;
-}
-
-.profile-info h2 {
-    margin-bottom: 5px;
-}
-
-.profile-info .location {
-    font-size: 0.9em;
-    color: #333;
+.post-container {
+    background: var(--color-blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
     margin-bottom: 30px;
 }
 
-.profile-info h3 {
-    margin-bottom: 10px;
-    font-size: 1.1em;
+.img-container {
+    width: 100%;
+    overflow: hidden;
 }
 
-.profile-info .bio {
-    font-size: 0.9em;
-    line-height: 1.5;
+.post-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Área de Chat (Barra lateral) */
+.post-container h3, .post-container p {
+    padding: 15px 20px;
+}
+
+.post-container h3 {
+    padding-bottom: 5px;
+}
+
+.post-container p {
+    padding-top: 0;
+    color: #666;
+}
+
+/* --- SIDEBAR (CHAT/CONTACTOS) --- */
 .chat-sidebar {
-    width: 300px;
-    border: 1px solid #000;
+    background: var(--color-blanco);
     padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    height: fit-content;
+}
+
+.chat-sidebar h3 {
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-fondo);
+    padding-bottom: 10px;
+}
+
+.chat-list {
+    list-style: none;
 }
 
 .chat-user {
     display: flex;
     align-items: center;
-    gap: 15px;
-    text-decoration: none;
-    color: #000;
+    gap: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background 0.2s;
 }
 
 .chat-user:hover {
-    font-weight: bold;
+    background: var(--color-fondo);
 }
 
 .avatar {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid #000;
+    overflow: hidden;
 }
 
-/* Footer */
-.footer {
-    border: 1px solid #000;
-    text-align: center;
-    padding: 15px;
-    margin-top: 10px;
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Botón flotante */
-.floating-btn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 60px;
-    height: 60px;
+/* --- PERFIL --- */
+.profile-box {
+    background: var(--color-blanco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    border: 1px solid #000;
-    background-color: #fff;
+    overflow: hidden;
+    border: 5px solid var(--color-fondo);
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.location {
+    color: #888;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.bio {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* --- FORMULARIO DE EDICIÓN --- */
+.edit-form {
+    background: var(--color-blanco);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.edit-form label {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.edit-form input, .edit-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.edit-form button {
+    background: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.3s;
+}
+
+.edit-form button:hover {
+    background: var(--color-secundario);
+    transform: translateY(-2px);
+}
+
+/* --- ESTILOS PARA LOGIN Y REGISTRO --- */
+.auth-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    min-height: calc(100vh - 80px);
+    padding: 20px;
 }
 
-/* Diseño Responsivo (Ocultar chat en móviles) */
-@media (max-width: 768px) {
-    .chat-sidebar {
-        display: none;
-    }
-    
-    .profile-box {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .profile-info {
-        text-align: center;
-    }
+.auth-card {
+    background-color: var(--color-blanco);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.auth-card h2 {
+    color: var(--color-principal);
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-align: left;
+}
+
+.auth-form label {
+    font-weight: bold;
+    color: var(--color-texto);
+    font-size: 0.9rem;
+}
+
+.auth-form input {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.btn-submit {
+    background-color: var(--color-principal);
+    color: var(--color-blanco);
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--color-secundario);
+}
+
+.auth-footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.auth-footer a {
+    color: var(--color-principal);
+    font-weight: bold;
 }
