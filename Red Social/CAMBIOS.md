@@ -1,6 +1,6 @@
 # Integrantes
 - Lopez Gonzalez David Concepcion
-- Quique
+- Hernández Lira José Enrique
 
 
 
