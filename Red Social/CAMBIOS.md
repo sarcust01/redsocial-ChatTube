@@ -1,47 +1,46 @@
-# Bitácora de Cambios - InstaTube
+# Integrantes
+- Lopez Gonzalez David Concepcion
+- Quique
 
-Este documento registra las modificaciones realizadas en el proyecto de la Red Social.
 
-## Cambios Realizados
 
-### 1. Cambio de Marca (Branding)
-- Se ha renombrado la aplicación de **LifeInvader** a **InstaTube**.
-- Se actualizaron los títulos de las páginas en todos los archivos HTML (`index.html`, `login.html`, `registro.html`, `perfil.html`, `editar.html`).
-- Se actualizó el encabezado (header) principal en todas las páginas.
-- Se actualizó la clave de `localStorage` de `lifeInvaderUsers` a `instaTubeUsers` para mantener la consistencia en el almacenamiento de datos.
-- Se actualizaron las referencias dinámicas en `app.js`.
+# Documentación del Proyecto - InstaTube
 
-### 2. Corrección de Estilos (CSS)
-- Se restauraron los estilos base, variables de color y el diseño responsivo en `styles.css`.
-- Se aplicó una **temática verde** sólida para un aspecto más sencillo y minimalista, eliminando degradados y sombras complejas en el banner.
-- Se simplificó la navegación y el tamaño de la tipografía para un diseño más limpio.
-- Se definieron los estilos para el feed de publicaciones, la barra lateral de contactos y la vista de perfil.
-- Se corrigió el problema de las variables no definidas que impedía que el CSS se aplicara correctamente.
+Este documento detalla la estructura y características actuales de la Red Social **InstaTube**, un prototipo estático desarrollado con HTML y CSS.
 
-### 3. Eliminación de JavaScript (Mockup Estático)
-- Se han eliminado todas las referencias a `app.js` y los scripts inline en los archivos HTML.
-- El archivo `app.js` ha sido borrado del proyecto.
-- Las secciones que antes eran dinámicas (lista de contactos, perfil de usuario) ahora contienen datos estáticos integrados directamente en el HTML.
-- Se rellenaron los formularios con valores predeterminados para mantener la visualización del diseño.
+## Descripción General
+**InstaTube** es una plataforma de red social minimalista que permite a los usuarios visualizar un feed de publicaciones, perfiles de contactos y gestionar su propia información de perfil. El proyecto destaca por su diseño limpio con una temática verde sólida y una interfaz intuitiva.
 
-### 4. Perfiles Estáticos y Contactos
-- Se ha actualizado el perfil principal a **David Lopez** (México, Campeche).
-- Se agregaron las fotos de perfil locales desde la carpeta `img/Foto de perfil/` para David y todos los contactos.
-- Se recreó el feed de publicaciones en `index.html` utilizando las imágenes locales de `img/Foto de publicacion/`, asignando cada imagen a su respectivo autor.
-- La publicación superior en el feed es de **David Lopez**, simulando ser la actualización más reciente.
-- Se crearon 6 archivos HTML adicionales para simular perfiles de contactos reales con sus respectivas fotos locales:
-    - `perfil_ana.html`
-    - `perfil_carlos.html`
-    - `perfil_maria.html`
-    - `perfil_pedro.html`
-    - `perfil_laura.html`
-    - `perfil_juan.html`
-- Se actualizó la lista de contactos en `index.html` y en todos los perfiles para incluir las miniaturas de las fotos de perfil locales.
+## Características Principales
 
-## Estructura del Proyecto
-- `index.html`: Feed principal con publicaciones y contactos con fotos locales.
-- `perfil.html`: Perfil de David Lopez con foto local.
-- `perfil_*.html`: Perfiles individuales de los contactos con fotos locales.
-- `editar.html`: Formulario de edición estático.
-- `styles.css`: Estilos verdes simplificados.
-- `img/`: Carpeta que contiene todas las imágenes locales (perfil y publicaciones).
+### 1. Feed de Publicaciones (`index.html`)
+- Muestra una lista de publicaciones de diversos usuarios.
+- **Estructura de Publicación Mejorada**:
+    - Descripción y hashtags ahora aparecen en la parte superior.
+    - Fotografía central (almacenada localmente).
+    - **Sección de Comentarios Enriquecida**: Incluye comentarios estáticos con el avatar (foto de perfil) del autor del comentario para una apariencia más real.
+    - Formulario de simulación para nuevos comentarios.
+- **Banner Publicitario**: Se integró un banner de publicidad simulado en la parte superior del feed y de cada perfil.
+
+### 2. Gestión de Perfiles
+- **Perfil Principal (`perfil.html`)**: Muestra la información de David Lopez (México, Campeche), incluyendo su biografía, foto de perfil local y banner publicitario.
+- **Perfiles de Contactos (`perfil_*.html`)**: Existen 6 perfiles individuales (Ana, Carlos, Maria, Pedro, Laura y Juan) con información específica, fotos locales y banners temáticos.
+- **Edición de Perfil (`editar.html`)**: Formulario estático para simular la modificación de datos personales.
+
+### 3. Autenticación Simulada
+- **Login (`login.html`)**: Interfaz de acceso directo. Al presionar el botón de inicio de sesión, el usuario es redirigido automáticamente al feed principal (`index.html`) sin necesidad de validación, agilizando la navegación en el prototipo.
+- **Registro (`registro.html`)**: Interfaz para simular la creación de una nueva cuenta.
+
+### 4. Diseño y Estilos (`styles.css`)
+- **Temática Visual**: Uso de colores verdes sólidos (`#4CAF50`) para una apariencia profesional y sencilla.
+- **Responsividad**: Diseño adaptado para dispositivos móviles y escritorio mediante el uso de CSS Grid y Media Queries.
+- **Componentes**: Estilos definidos para banners, tarjetas de publicación, barras laterales de contactos y formularios.
+
+## Estructura de Archivos
+- `index.html`: Página principal con el feed.
+- `login.html` / `registro.html`: Páginas de acceso.
+- `perfil.html`: Perfil del usuario logueado.
+- `perfil_ana.html`, `perfil_carlos.html`, etc.: Perfiles de la red de contactos.
+- `editar.html`: Formulario de edición.
+- `styles.css`: Hoja de estilos global.
+- `img/`: Directorio de recursos visuales (fotos de perfil y publicaciones).
